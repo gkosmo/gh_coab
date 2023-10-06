@@ -1,24 +1,21 @@
 # GhCoab
 
-TODO: Delete this and the text below, and describe your gem
-
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/gh_coab`. To experiment with that code, run `bin/console` for an interactive prompt.
+This is a very simple gem. It helps you get the "Co-authored-by" text to add a co-author to a commit. You call the method in your terminal `gh_coab s -u <GITHUB_USERNAME>` and the gem does an api call to the public events of the author to find emails associated with it.
 
 ## Installation
 
-TODO: Replace `UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG` with your gem name right after releasing it to RubyGems.org. Please do not do it earlier due to security reasons. Alternatively, replace this section with instructions to install your gem from git if you don't plan to release to RubyGems.org.
 
 Install the gem and add to the application's Gemfile by executing:
 
-    $ bundle add UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG
+    $ bundle add gh_coab
 
 If bundler is not being used to manage dependencies, install the gem by executing:
 
-    $ gem install UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG
+    $ gem install gh_coab
 
 ## Usage
 
-TODO: Write usage instructions here
+`gh_coab s -u <GITHUB_USERNAME>`
 
 ## Development
 
