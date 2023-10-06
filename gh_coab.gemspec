@@ -9,16 +9,16 @@ Gem::Specification.new do |spec|
   spec.email = ["gkosmo1@hotmail.com"]
 
   spec.summary = "Get co-authors from github"
-  spec.description = "Get co-authors from github"
-  spec.homepage = "https://www.github.com/gkosmo/coab"
+  spec.description = "Get co-authors from github \n in your terminal  type gh_coab s -u <github_username> \n or gh_coab show -u <github_username> \n and you will get the message you need to add to your commit message to add co-authors"
+  spec.homepage = "https://www.github.com/gkosmo/gh_coab"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 2.6.0"
 
   # spec.metadata["allowed_push_host"] = "???"
 
   spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "https://www.github.com/gkosmo/coab"
-  spec.metadata["changelog_uri"] = "https://www.github.com/gkosmo/coab"
+  spec.metadata["source_code_uri"] = "https://www.github.com/gkosmo/gh_coab"
+  spec.metadata["changelog_uri"] = "https://www.github.com/gkosmo/gh_coab"
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
