@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "net/http"
 require "benchmark"
 require "json"
@@ -45,11 +47,7 @@ class GhClient
     unless success?(response)
       error_message = "ERROR - code: #{response.code} - #{response.message} - #{response.body}"
 
-      fail(
-        client_error_class.new(
-          error_message
-        )
-      )
+      raise client_error_class, error_message
     end
 
     parsed_response
@@ -68,11 +66,9 @@ class GhClient
     rescue JSON::ParserError
       Rails.logger.error("Failed to parse response that was expected to be JSON: #{body}")
 
-      if raise_on_parsing_error
-        raise raise_on_parsing_error.new, "Could not parse response: #{body}"
-      else
-        {}
-      end
+      raise raise_on_parsing_error.new, "Could not parse response: #{body}" if raise_on_parsing_error
+
+      {}
     end
   end
 

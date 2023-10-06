@@ -5,6 +5,7 @@ class GhService
   class GhClientError < StandardError; end
 
   attr_reader :client_error_class
+
   def initialize
     @client_error_class = GhClientError
   end
@@ -13,6 +14,7 @@ class GhService
     response = client.get_events(username)
     response.map do |event|
       next if event.dig(:payload, :commits).nil?
+
       event[:payload][:commits].map do |commit|
         {name: commit[:author][:name], email: commit[:author][:email]}
       end

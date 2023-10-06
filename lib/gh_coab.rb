@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "thor"
 require_relative "gh_coab/gh_coab"
 # frozen_string_literal: true

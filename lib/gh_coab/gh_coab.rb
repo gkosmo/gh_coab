@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative "gh_service"
 module GhCoab
   class GhCoab
