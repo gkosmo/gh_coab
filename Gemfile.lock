@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    gh_coab (0.1.0)
+    gh_coab (0.1.1)
 
 GEM
   remote: https://rubygems.org/

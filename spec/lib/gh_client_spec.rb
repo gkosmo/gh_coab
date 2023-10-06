@@ -1,4 +1,3 @@
-
 RSpec.describe GhClient do
   it "gets a profile" do
     name = "George Kosmopoulos"

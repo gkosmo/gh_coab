@@ -14,7 +14,7 @@ class GhService
     response.map do |event|
       next if event.dig(:payload, :commits).nil?
       event[:payload][:commits].map do |commit|
-        commit[:author][:email]
+        {name: commit[:author][:name], email: commit[:author][:email]}
       end
     end.flatten.uniq.compact
   end

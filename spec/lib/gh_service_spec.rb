@@ -3,7 +3,7 @@
 RSpec.describe GhService do
   context "#get_emails" do
     it "gets emails" do
-      expected_emails = ["gkosmo1@hotmail.com"]
+      expected_emails = [{email: "gkosmo1@hotmail.com", name: "george kosmopoulos"}, {email: "gkosmo1@hotmail.com", name: "george kosmo"}]
       emails = described_class.new.get_emails("gkosmo")
       expect(emails).to be_an(Array)
       expect(emails).to eq(expected_emails)

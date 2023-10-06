@@ -5,6 +5,8 @@ module GhCoab
     def self.write_coab(username)
       name = service.get_name(username)
       emails = service.get_emails(username)
+      emails.select! { |email| email[:name].downcase == name.downcase && !email[:email].nil? }
+      emails = emails.map { |email| email[:email] }
       coabs = emails.map do |email|
         "#{COAB}#{name} <#{email}>"
       end
