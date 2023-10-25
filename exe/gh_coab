@@ -2,7 +2,7 @@
 # frozen_string_literal: true
 
 require "bundler/setup"
-require "gh_coab"
+require_relative "../lib/gh_coab.rb"
 
 GhCoab::CLI.start
 # You can add fixtures and/or initialization code here to make experimenting
